@@ -1,1 +1,56 @@
-Nothing to output - the added file 'sniper_phoenix_v13_otimizado.py' is a source code file and should not be ignored.
+```gitignore
+# Data files
+*.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.ENV
+.env
+*.env
+.env.local
+.env.*
+.env.local.*
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.swp
+.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build artifacts
+build/
+dist/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
+```
