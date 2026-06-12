@@ -200,12 +200,19 @@ class SniperPhoenixV15B:
                 is_signal, reason = self.detect_acceleration_signal(df, idx)
                 
                 if is_signal:
-                    quantidade = self.capital / current_price
+                    # Usa 100% do capital disponível
+                    capital_disponivel = self.capital
+                    quantidade = capital_disponivel / current_price
+                    valor_alocado = quantidade * current_price
+                    
                     self.posicao = quantidade
                     self.preco_entrada = current_price
                     self.take_profit = current_price * (1 + self.tp_percent)
                     self.stop_loss = current_price * (1 - self.sl_percent)
                     self.trailing_ativo = False
+                    
+                    # Deduz o capital alocado
+                    self.capital -= valor_alocado
                     
                     self.trades_log.append({
                         'trade_id': len(self.trades_log) // 2 + 1,
@@ -216,7 +223,7 @@ class SniperPhoenixV15B:
                         'pnl': 0,
                         'pnl_percent': 0,
                         'reason': reason,
-                        'capital_after': self.capital - (quantidade * current_price),
+                        'capital_after': self.capital,
                         'entry_price': current_price,
                         'exit_price': None,
                         'volume': row['volume'],
