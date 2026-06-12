@@ -1,18 +1,25 @@
-```
-# Logs and temp files
-*.log
-*.tmp
+```gitignore
+# Data and backtest files
+*.csv
 
-# Python specific
-*.pyc
+# Python
 __pycache__/
+*.pyc
 *.pyo
 *.pyd
 .Python
 env/
 venv/
 .venv/
-.venv*/
+.ENV
+.env
+.env.local
+.env.*
+.envrc
+.venv.bak
+env.bak
+venv.bak
+.python-version
 pip-log.txt
 pip-delete-this-directory.txt
 .tox/
@@ -23,61 +30,12 @@ nosetests.xml
 coverage.xml
 *.cover
 *.log
+*.tmp
+*.swp
+*.swo
 .DS_Store
 Thumbs.db
 
-# Analysis output
-analise_output.txt
-
-# Environment files
-.env
-.env.local
-.env.*
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Build artifacts
-dist/
-build/
-*.out
-*.exe
-*.dll
-*.so
-*.a
-*.obj
-
-# Dependencies
-node_modules/
-.mypy_cache/
-.pytest_cache/
-target/
-.gradle/
-
-# Compressed files
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
+# Generated reports
+*.md
 ```
